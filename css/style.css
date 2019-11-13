@@ -1,8 +1,16 @@
 /* header */
+header{
+    position: relative;
+    height: 722px;
+}
 /* nav */
 .navbar{
     height: 83px;
    background-color:rgba(63,67,52,0.6);
+   border: none;
+   border-bottom: 1px white solid;
+   border-radius: 0;
+   z-index: 2;
 }
 .navbar .container{
     margin: 11.5px auto;
@@ -14,6 +22,8 @@
 }
 .navbar .container .nav li>a:hover{
     color: white;
+    border-top:2px solid #fff;
+    border-bottom:2px solid #fff;
 }
 #navbar-brand{
     font-family: 'Racing Sans One', cursive;
@@ -32,4 +42,300 @@
 }
 .navbar .container .nav>.show>a{
     color: #fff;
+}
+/* 轮播图 */
+#slideshow{
+    position: absolute;
+    top: 0;
+}
+
+/* 第二部分about */
+.about{
+    height: 623px;
+    padding: 50px 0;
+}
+.about .about1{
+    text-align: center;
+
+}
+.about h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff5722;
+
+}
+.about .borBottom{
+    width: 120px;
+    height: 5px;
+    background: #ff5722;
+    border-radius: 4px;
+    margin: 25px auto 55px;
+}
+.about>h3{
+    color: #777777;
+    height: 80px;
+    line-height: 40px;
+    font-weight: 600;
+    font-family: 'Raleway', sans-serif;
+    padding: 0 50px;
+}
+.about h4{
+    color: #777777;
+    height: 22px;
+    margin: 30px auto 50px;
+}
+
+/* about下面的文字图片部分 */
+.about .container{
+    height: 450px;
+}
+.about .container .row .media-body{
+    width: 270px;
+    height: 202px;
+    display: inline-block;
+}
+.about .container .row .media-heading{
+    color: #f44e3c;
+}
+.about .container .row h5{
+    color: #999999;
+    line-height: 25px;
+}
+.about .container .row h5 .glyphicon{
+    color: #bdd001;
+    margin-right: 20px;
+}
+.about .container .row img{
+    width: 270px;
+    height: 202px;
+}
+/* features */
+.features{
+    text-align: center;
+    background: #f5f5f5;
+    height: 731px;
+    padding: 30px 0 20px;
+}
+.features h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff5722;
+
+}
+.features .borBottom{
+    width: 120px;
+    height: 5px;
+    background: #ff5722;
+    border-radius: 4px;
+    margin: 25px auto 55px;
+}
+.features  .row{
+    background: #fff;
+    position: relative;
+    transition: .5s all;
+
+
+}
+.features .features-item{
+    padding: 30px 20px 20px;
+    margin: 15px 0;
+
+}
+.features  .features-icon{
+    height: 35px;
+}
+.features  .row .features-icon .glyphicon{
+    color: #bdd001;
+    font-size: 35px;
+
+}
+.features .row .features-text{
+    margin-top: 30px;
+    -webkit-transition:all 1s;
+
+}
+.features .row h4{
+    color: #ff5722;
+    font-weight: bold;
+
+}
+.features .row p{
+    padding: 20px 0;
+    color: #463933;
+
+}
+/* 小角标 */
+.span-item{
+    display: block;
+    width: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-width: 0px 30px 30px 0px;
+    border-style: solid;
+    border-color: #f5f5f5  #f5f5f5 #ff5722  #ff5722 ;
+    box-shadow: -1px 1px 1px rgba(0,0,0,0.3);
+}
+/* active  */
+.features .active{
+transition: .5s all;
+}
+.features .active .row{
+background: #bdd001;
+/* transition: .5s all; */
+}
+.features .active .features-text{
+    -webkit-transform:translateY(-5px);
+}
+.features .active h4,.features .active p,.features .active .features-icon .glyphicon{
+    color: white;
+}
+.features .active .span-item{
+    border-color: #f5f5f5  #f5f5f5 #7c8801  #7c8801 ;
+}
+
+/* specials */
+#specials{
+    background: url(../images/real.jpg) no-repeat center fixed;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0 80px;
+}
+#specials .container{
+    padding: 0 15px;
+}
+#specials .container  img{
+    width: 200px;
+    border: 3px solid white;
+}
+#specials .container .caption h3{
+    color: #bdd001;
+    line-height: 75px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+}
+#specials .container .caption p{
+    color: white;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* today  */
+#today{
+    background: #f5f5f5;
+    padding: 50px 0;
+    
+}
+#today h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff5722;
+    margin: 0;
+}
+#today .borBottom{
+    width: 120px;
+    height: 5px;
+    background: #ff5722;
+    border-radius: 4px;
+    margin: 25px auto 55px;
+}
+#today .container{
+    margin: 0 auto;
+    padding: 0 15px;
+}
+#today .container img{
+    width: 100%;
+}
+#today .container .media-heading,#today .container .glyphicon{
+    color: #bdd001;
+}
+#today .container .today-text{
+    padding-left: 50px;
+}
+#today .container .today-text h5{
+    margin: 10px 0;
+    height: 30px;
+    line-height: 30px;
+    color: #999999;
+    font-weight: 600;
+    
+}
+#today .container .glyphicon{
+    margin:0 10px;
+}
+ /* recipes */
+ .recipes{
+     padding: 15px 0;
+ }
+ .recipes h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: #ff5722;
+    text-align: center;
+
+}
+.recipes .borBottom{
+    width: 120px;
+    height: 5px;
+    background: #ff5722;
+    border-radius: 4px;
+    margin: 25px auto 35px;
+    text-align: center;
+}
+.recipes>h4{
+    color: #0a0a0a;
+    height: 40px;
+    line-height: 40px;
+    font-family: 'Raleway', sans-serif;
+    padding: 0 50px;
+    text-align: center;
+    font-weight: 450;
+}
+.recipes .img-wrap{
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+.recipes .img-item{
+    float: left;
+    width: 5688px;
+    height: 180px;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    /* transition: all 800ms ease 0s;
+    transform: translate3d(0px,0px,0px); */
+}
+.recipes .img-item .item{
+    float: left;
+    width: 316px;
+    height: 180px;
+    list-style-type: none;
+    position: relative;
+
+}
+.recipes .img-item .item img{
+    width: 316px;
+    height: 180px;
+}
+.recipes .img-item .img-caption{
+text-align: center;
+color: white;
+height: 90px;
+width: 316px;
+position: absolute;
+left:0;
+bottom: 0;
+transition: .8s ease all;
+-webkit-transition: all 0.8s ease;
+transform-style: preserve-3d;
+background: rgba(5, 5, 3, 0.78);
+}
+.recipes .img-item .img-caption span{
+    font-weight: 200;
+    color: rgba(250, 250, 250, 0.6);
 }
