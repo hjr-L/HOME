@@ -3,6 +3,7 @@ $(document).ready(
 
         features();
         recipes();
+        team();
     }
 );
 
@@ -21,17 +22,7 @@ function features(){
 function recipes() {
     var $imgs = $('#recipes').find('.img-item');
     var $item = $('#recipes').find('.item');
-    $item.each(function () {
-        $item.hover(function () {
-            var $caption = $(this).find('.img-caption');
-            $caption.removeClass('hidden');
-        }, function () {
-            var $caption = $(this).find('.img-caption');
-            $caption.addClass('hidden');
-        });
-        // 动起来
-        
-    })
+  
             function move() {
                 var $left = $imgs.css('left');
                 var $left = parseInt($left);
@@ -44,5 +35,36 @@ function recipes() {
                 // $imgs.css('left',$left+'px');
                 $imgs.animate({'left':$left+'px'},900);
             }
-            setInterval(move, 2200);
+           var timer= setInterval(move, 2200);
+        //    $item.each(function () {
+        //     $item.hover(function () {
+        //         clearInterval(timer);
+        //     }, function () {
+        //         var timer= setInterval(move, 2200);
+        //     });
+        //     // 动起来
+            
+        // })
+}
+function team(){
+    var $list=$('#team').find('.list')
+    $list.each(function(){
+        var $ul=$(this).find('ul')
+        var $img=$(this).find('img')
+        var $bor=$(this).find('.bor')
+
+    $(this).hover(function(){
+        $ul.animate({'bottom':'40px','opacity':'1'},500);
+        $img.animate({'opacity':'0.8'},360);
+        $bor.animate({'top':'130px'},500)
+    },function(){
+        $ul.animate({'bottom':'130px','opacity':'0'},500);
+        $img.animate({'opacity':'1'},360);
+        $bor.animate({'top':'-15px'},500)
+    
+    
+    });
+})
+
+    
 }

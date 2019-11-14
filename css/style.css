@@ -151,7 +151,7 @@ header{
 }
 .features .row .features-text{
     margin-top: 30px;
-    -webkit-transition:all 1s;
+    transition:all 1s;
 
 }
 .features .row h4{
@@ -182,10 +182,10 @@ transition: .5s all;
 }
 .features .active .row{
 background: #bdd001;
-/* transition: .5s all; */
+transition: .5s all;
 }
 .features .active .features-text{
-    -webkit-transform:translateY(-5px);
+    transform:translateY(-5px);
 }
 .features .active h4,.features .active p,.features .active .features-icon .glyphicon{
     color: white;
@@ -207,6 +207,10 @@ background: #bdd001;
 #specials .container  img{
     width: 200px;
     border: 3px solid white;
+}
+#specials .container img:hover{
+    border:3px solid #f44336;
+    transition: border 1s;
 }
 #specials .container .caption h3{
     color: #bdd001;
@@ -268,7 +272,7 @@ background: #bdd001;
 }
  /* recipes */
  .recipes{
-     padding: 15px 0;
+     padding: 30px 0 100px;
  }
  .recipes h1{
     font-size: 40px;
@@ -316,26 +320,368 @@ background: #bdd001;
     height: 180px;
     list-style-type: none;
     position: relative;
+    text-align: center;
 
 }
 .recipes .img-item .item img{
     width: 316px;
     height: 180px;
 }
+
+.recipes .img-item .item:hover .img-caption{
+    transition:opacity, 2.5s ease ;
+    opacity: 1;
+}
+
 .recipes .img-item .img-caption{
-text-align: center;
-color: white;
-height: 90px;
-width: 316px;
-position: absolute;
-left:0;
-bottom: 0;
-transition: .8s ease all;
--webkit-transition: all 0.8s ease;
-transform-style: preserve-3d;
-background: rgba(5, 5, 3, 0.78);
+    text-align: center;
+    color: white;
+    height: 90px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transition:all 0.8s ease ;
+    transform-style: preserve-3d;
+    background: rgba(5, 5, 3, 0.78);
+    opacity: 0;
 }
 .recipes .img-item .img-caption span{
     font-weight: 200;
     color: rgba(250, 250, 250, 0.6);
+}
+
+/* skills */
+#skills-all{
+   
+    padding: 100px 0;
+    background: url(../images/real.jpg) fixed no-repeat center;
+}
+#skills-all h1{
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+
+}
+#skills-all .borBottom{
+    text-align: center;
+    width: 120px;
+    height: 5px;
+    background: #ff5722;
+    border-radius: 4px;
+    margin: 25px auto 55px;
+}
+#skills-all .skills-item{
+    width: 1170px;
+    height: 37px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+}
+#skills-all .skills-item p{
+    font-size: 16px;
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 600;
+}
+#skills-all .skills-item .progress{
+height: 5px;
+border-radius: 0;
+}
+#skills-all .skills-item .progress-bar{
+    background: #bdd001;
+}
+
+/* stats  */
+
+#skills-all .stats{
+    margin-top: 90px;
+}
+#skills-all .stats .container{
+    text-align: center;
+}
+#skills-all .stats .container .glyphicon{
+    color: #fff;
+    font-size: 45px;
+    margin: 10px 0  30px;
+}
+#skills-all .stats .container .caption {}
+#skills-all .stats .container .caption h3 {
+    color: #f44336;
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+#skills-all .stats .container .caption p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #eee;
+}
+
+/* team  */
+#team{
+    text-align: center;
+    padding: 40px 0 0px;
+}
+#team h1{
+    font-size: 40px;
+    font-weight: bold;
+    color:  #ff5722;
+}
+#team .borBottom{
+    width: 120px;
+    height: 5px;
+    background: #ff5722;
+    border-radius: 4px;
+    margin: 25px auto 65px;
+}
+#team .container .text h4,#team .container .text .text-border ul,#team .container img{
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+}
+
+#team .container .list{
+    width: 550px;
+   
+   
+}
+#team .container .text{
+z-index: 3;
+margin: 40px 0;
+position: relative;
+height: 280px;
+}
+#team .container .text h4{
+    font-size: 30px;
+    font-weight: 300;
+    top: 0;
+    color: #fff;
+}
+#team .container .text .text-border{
+    text-align: center;
+}
+#team .container .text .text-border ul{
+    /* display: none; */
+    margin: 0;
+    padding: 0;
+    bottom: 150px;
+    opacity: 0;
+}
+#team .container .text .text-border li{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    list-style-type: none;
+}
+#team .container .text .text-border a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+#team .container .text .text-border a .glyphicon{
+    color: white;
+    margin: auto;
+    height: 35px;
+    line-height: 35px;
+    transition: color .8s,transform .8s;
+}
+#team .container .text .text-border a:hover{
+border:#bdd001 2px solid;
+}
+#team .container .text .text-border a:hover .glyphicon{
+color: #bdd001;
+transform: rotate(360deg);
+}
+#team .container .bor{
+    width: 400px;
+   position: absolute;
+   top: -15px;
+   left: 70px;
+    height: 130px;
+    border: 5px solid #fff;
+}
+
+/* download */
+#download{
+    text-align: center;
+    padding: 20px 0;
+}
+#download h1{
+    font-size: 40px;
+    font-weight: bold;
+    color:  #ff5722;
+}
+#download .borBottom{
+    width: 120px;
+    height: 5px;
+    background: #ff5722;
+    border-radius: 4px;
+    margin: 25px auto 65px;
+}
+#download .container ul{
+    margin: 0 auto;
+}
+#download ul li{
+    display: inline-block;
+    list-style-type: none;
+    width: 137px;
+    height: 137px;
+    margin: 0 5px;
+}
+#download ul li img{
+    width: 137px;
+    height: 137px;
+}
+
+/* contact  */
+#contact{
+    text-align: center;
+    padding: 20px 0;
+    background: url(../images/1.jpg) no-repeat fixed  center;
+}
+#contact h1{
+    font-size: 40px;
+    font-weight: bold;
+    color:  #fff;
+}
+#contact .borBottom{
+    width: 120px;
+    height: 5px;
+    background: #ff5722;
+    border-radius: 4px;
+    margin: 25px auto 65px;
+}
+#contact form .text,#contact form #textarea{
+    width: 100%;
+    padding: 14px 17px;
+    color: #fff;
+    border: 1px #fff solid;
+    background-color: rgba(51, 51, 51, .61);
+
+}
+#contact form .text{
+    height: 50px;
+    margin: 0 0 20px;
+    
+}
+#contact form #textarea{
+    height: 190px;
+}
+#contact form .text:focus,#contact form #textarea:focus{
+    background-color: rgba(14, 13, 13, 0.9);
+}
+#contact form .btn{
+    width: 170px;
+    height: 50px;
+    margin: 30px auto;
+    background-color: rgba(51, 51, 51, .61);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 0;
+
+}
+#contact form .btn:hover{
+    background-color: rgba(14, 13, 13, 0.9);
+
+}
+
+/* footer  */
+footer{
+    padding: 40px 0 10px;
+    text-align: center;
+    /* margin: 0px; */
+    background-color: rgba(14, 13, 13, 0.9);
+}
+footer  a,footer  p{
+    color: #fff;
+}
+footer .foot-one ul{
+    margin: 0;
+    padding: 0;
+
+}
+footer li{
+    list-style-type: none;
+    color: #fff;
+}
+footer h4{
+    color: #ff5722;
+    margin: 20px 0;
+}
+footer a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+footer .foot-one{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+footer .foot-one .text{
+    color: #fff;
+    background-color: rgba(51, 51, 51, .61);
+}
+footer .foot-one .input-group-addon{
+    background: #bdd001;
+}
+footer .foot-two{
+    text-align: center;
+}
+footer .foot-two ul{}
+footer .foot-two ul li{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    list-style-type: none;
+    margin: 0 2px;
+}
+footer .foot-two ul li a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+footer .foot-two ul a .glyphicon{
+    color: white;
+    margin: auto;
+    height: 35px;
+    line-height: 35px;
+    transition: color .8s,transform .8s;
+}
+footer .foot-two ul a:hover{
+border:#bdd001 1px solid;
+}
+footer .foot-two ul a:hover .glyphicon{
+color: #bdd001;
+transform: rotate(360deg);
+}
+
+
+/* up  */
+.up{
+position: fixed;
+bottom: 10px;
+right: 30px;
+
+}
+.up a{
+    float: right;
+    width: 25px;
+    height: 25px;
+    border: 2px solid #bdd001;
+    border-radius: 50%;
+    text-align: center;
+}
+.up span{
+color: #bdd001;
+font-size: 15px;
+line-height: 20px;
 }
